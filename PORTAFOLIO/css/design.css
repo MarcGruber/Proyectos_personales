@@ -1,0 +1,262 @@
+:root{
+    --primary:rgb(41, 41, 41);
+    --secondary:#e3ce8b;
+
+}
+
+*{
+   padding: 0;
+   margin: 0;
+   text-decoration: none;
+   list-style: none;
+   box-sizing: border-box; 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,900&display=swap');
+
+@media only screen and (max-width: 700px){
+    /*MENU*/
+    body{
+        font-family: sans-serif;
+        font-weight: lighter;
+        color: pink;
+        background-color: var(--primary);
+    }
+
+
+    nav{
+        border-bottom: 1px solid var(--secondary);
+        background-color: #000;
+    }
+
+    nav  .Deskmenu{
+        display: none;
+    }
+
+    .toggleNav{
+        position: absolute;
+        cursor: pointer;
+        margin: 0 1rem;
+        right: 0;
+    }
+
+    .toggleNav svg{
+        width: 1rem;
+        fill: var(white);
+    }
+
+    .toggleNav .close{
+        display: none;
+    }
+
+    .toggleNav .close,
+    .toggleNav .menu{
+        top: 0;
+    }
+
+    .checkNav{
+     display: none;   
+    }
+
+    .menunav{
+       display: flex;
+       flex-direction: column;
+       gap: 2rem;
+       align-items: center;
+       margin: 1rem; 
+    }
+
+    .menunav li{
+        list-style-type: none;
+        display: none;
+    }
+
+    .menunav li:first-child{
+        margin-right: auto;
+        display: block;
+    }
+
+
+    .checkNav:checked ~ .menunav {
+        width: 100%;
+        margin-left: 0;
+        padding: 30px 10px;
+    }
+
+    .checkNav:checked ~ .menunav li {
+        display: block;
+    }
+    .checkNav:checked ~ .toggleNav .close{
+        display: block;
+
+    }
+    .checkNav:checked ~ .toggleNav .menu{
+        display: none;
+    }
+
+    #logoNav{
+        width: 250px;
+        height: 100x;
+        position: absolute;
+        margin-top: 0;
+        }   
+    
+
+
+
+
+
+    }
+
+
+@media only screen and (min-width: 1300px){
+/*MENU*/
+nav{
+    background-color: black;
+    height: 85px;
+    width: 100%;
+    position: fixed;
+    z-index: 8;
+    top: 0px;
+
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+display: inline-block;
+line-height: 80px;
+margin: 0 5px;
+}
+
+nav ul li a{
+    color: #e3ce8b;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+.checkNav{
+    display: none;   
+   }
+.menunav li{
+    list-style-type: none;
+    display: none;
+}
+
+li a.active, li a:hover{
+background-color: #e3ce8b;
+color: black;
+transition: 1s;
+
+}
+
+#logoNav{
+width: 250px;
+height: 100x;
+position: absolute;
+margin-top: 4px;
+}
+.toggleNav .close,
+.toggleNav .menu{
+    top: 0;
+}
+/*BODY*/
+body{
+    background-color: rgb(41, 41, 41);
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+#introduction{
+    margin-top: 0px;
+    position: absolute;
+    margin-left: 40%;
+    top: 180px;
+    z-index: 3;
+    height: 200px;
+    width: 400px;
+    box-shadow: 0 10px 30px #000;
+    padding: 30px;
+    padding-bottom: 20px;
+}
+
+#introduction , .blur{
+    backdrop-filter: blur(5px);
+
+}
+
+#introduction, .nameC{
+color: blanchedalmond;
+height: 135px;
+text-align: center;
+}
+
+#fondo{
+width: 100%;
+height: 450px;
+position: absolute;
+margin-top: 0;
+top:80px;
+z-index: 2;
+
+}
+
+/*INFO PERSONAL*/
+
+#info{
+    height: 600px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 34%;
+    border-color: red;
+    background-color: black;
+    border-radius: 15px;
+    padding-top: 20px;
+}
+
+#personalLogo{
+width: 400px;
+height: 500px;
+position: absolute;
+margin-top: 70px;
+margin-left: 60px;
+padding-bottom: 100px;
+
+z-index:4;
+}
+
+#info #biografia{
+    height: 250px;
+    width: 500px;
+    background-color: #e3ce8b;
+    margin-top: 150px;
+    margin-left: 40%;
+    position: absolute;
+    z-index: 4;
+    border-radius: 15px;
+}
+
+#info #biografia p{
+    text-align: center;
+    padding: 60px 20px 60px 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+/*FOOTER*/
+footer{
+    margin-left: 40%;
+    margin-top: 30px;
+
+
+}
+
+footer img{
+    margin: 30px 2%;
+    height: 60px;
+    width: 60px;
+
+}
+}
